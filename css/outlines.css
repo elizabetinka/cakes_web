@@ -244,7 +244,7 @@ header nav ul li a {
 
 .card .photo {
     background-color: #eee;
-    height: 350px;
+    height: 50vh;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
