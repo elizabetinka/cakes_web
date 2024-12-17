@@ -21,7 +21,9 @@ body {
 }
 
 .header_line{
-    /* position: relative; */
+
+    /* height: 100%; */
+    position: relative;
     display: flex;
     justify-content: space-between; 
 
@@ -89,10 +91,12 @@ body {
 }
 
 .middleware {
+    position: relative;
     text-align: center;
 }
 
 .middleware_position {
+    position: relative;
     /* position: relative;
     height: 100%;
     width: 100%; */
@@ -100,22 +104,32 @@ body {
 }
 
 .middleware_text {
+    padding-top: 2%;
     font-size: 60px;
     /* font-size: clamp(100px, 8vw, 60px); */
 }
 
 .middleware_circle {
-    position: relative;
+    /* position: relative;
     margin: -100px auto 5%; 
-    /* left: 50%;  */
-    /* transform: translate(-50%, 0); */
+    /* left: 50%;  
+    transform: translate(-50%, 0); */
+
+    position: absolute; /* Абсолютное позиционирование */
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* top: -50%; Сдвигаем вниз на 50% от высоты родителя */
+    /*left: 50%;  Сдвигаем вправо на 50% от ширины родителя */ 
+    /*transform: translate(-50%, -50%); Центрируем элемент */
+
     width: 200px;
     height: 200px;
  
     border-radius: 50%; 
 
     border: 5px inset #E9A8D2;
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
     z-index: 15;
     text-align: center;
 
@@ -163,6 +177,20 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
     /* overflow: hidden; */
+}
+
+.catalog > :nth-child(6n+4),
+.catalog > :nth-child(6n+5),
+.catalog > :nth-child(6n+6) {
+    background-color: #E1E1E1; /* Светло-голубой */
+    /* color: #000; */
+}
+
+.catalog > :nth-child(6n+1),
+.catalog > :nth-child(6n+2),
+.catalog > :nth-child(6n+3) {
+    background-color: #ffd3d3; /* Светло-красный */
+    /* color: #000; */
 }
 
 .catalog_card_photo {
@@ -289,8 +317,25 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
 
+    .catalog > :nth-child(8n+5),
+    .catalog > :nth-child(8n+6),
+    .catalog > :nth-child(8n+7),
+    .catalog > :nth-child(8n+8)  {
+    background-color: #E1E1E1; /* Светло-голубой */
+    /* color: #000; */
+    }
+
+    .catalog > :nth-child(8n+1),
+    .catalog > :nth-child(8n+2),
+    .catalog > :nth-child(8n+3),
+    .catalog > :nth-child(8n+4)  {
+    background-color: #ffd3d3; /* Светло-красный */
+    /* color: #000; */
+    }
+
 
     .middleware_text {
+        padding-top: 0;
         font-size: 100px;
     }
 
@@ -309,6 +354,18 @@ body {
 @media (max-width: 1024px) {
     .catalog {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .catalog > :nth-child(4n+3),
+    .catalog > :nth-child(4n+4) {
+    background-color: #E1E1E1; /* Светло-голубой */
+    /* color: #000; */
+    }
+
+    .catalog > :nth-child(4n+1),
+    .catalog > :nth-child(4n+2) {
+    background-color: #ffd3d3; /* Светло-красный */
+    /* color: #000; */
     }
 
     .header_line {
@@ -333,16 +390,27 @@ body {
         font-size: 30px;
     }
 
-    /* .middleware_circle {
-        width: 170px;
-        height: 170px;
-    } */
+    .middleware_circle {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* Для мобильных устройств (до 768px) */
 @media (max-width: 768px) {
     .catalog {
         grid-template-columns: 1fr;
+    }
+
+
+    .catalog > :nth-child(even) {
+    background-color: #E1E1E1; /* Светло-голубой */
+    /* color: #000; */
+    }
+
+    .catalog > :nth-child(odd) {
+    background-color: #ffd3d3; /* Светло-красный */
+    /* color: #000; */
     }
 
     .header_line_logo_img {
