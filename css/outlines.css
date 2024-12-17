@@ -5,29 +5,24 @@
 }
 
 body {
-    /* font-family: Arial, sans-serif; */
-    /* background-color: #FCECF7;  */
     background-image: url('../img/cakes/megaback2.png');
-    background-size: cover; /* Изображение будет масштабироваться, чтобы поместиться в контейнер */
+    background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
 }
 
 
-header {
+.header {
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     flex-direction: column;
     position: relative;
-    /* padding: 10px 20px; */
 }
 
-header .upper{
+.header_line{
     position: relative;
     display: flex;
     justify-content: space-between; 
-     /* Выравнивание по левому краю */
 
     align-items: center; 
     width: 100%;
@@ -39,189 +34,97 @@ header .upper{
     padding-bottom: 1%;
 }
 
-/* header .headers{
-    position: relative;
-    display: flex;
-     /* Выравнивание по левому краю ч
-     justify-content: flex-end;
-} */
 
-
-.logo img {
-    max-width: 100px; /* Ограничиваем ширину изображения */
-    height: auto; /* Автоматически сохраняем пропорции */
-    display: block; /* Убираем нижний отступ изображения */
+.header_line_logo_img {
+    max-width: 100px;
+    height: auto;
+    display: block; 
     padding-left: 15%;
 }
 
 
-.photo img {
-    /* max-width: 100px; Ограничиваем ширину изображения */
-    height: auto; /* Автоматически сохраняем пропорции */
-    display: block; /* Убираем нижний отступ изображения */
-    /* padding-left: 15%; */
-}
-
-.upper .logo {
+.header_line_logo {
     align-items: center;
     position: relative;
     display: flex; 
     flex-direction: column;
     justify-content: center; 
 }
-/* 
-header .upper .logo {
-    /* justify-content: flex-start; 
-    position: relative;
-    font-size: 20px;
-    padding-right: 10%;
-    padding-left: 5%;
 
-    background-image: url('../img/cakes/logo2.png');
-    background-size: contain;  /*Изображение будет масштабироваться, чтобы поместиться в контейнер 
-    background-repeat: no-repeat;
-    background-position: center;
-
-    /* margin-left: 0%; */
-
-    /* padding-top: 0%;
-    padding-bottom: 0%; 
-
-} */
-
-
-header nav ul {
+.menu_ul {
     display: flex; 
     list-style-type: none;
-    /* align-items: center; */
 }
 
-header nav ul li {
-    margin-right: 15px;
-    /* align-items: center; */
-}
-
-header nav ul li a {
+.menu_a {
     color: #E1E1E1;
     text-decoration: none;
-    padding: 5px 10px; 
-    /* align-items: center; */
 }
 
-.hero {
+.header_line_menu a {
+    padding: 5px 10px; 
+}
+
+.header_background {
+    position: relative; 
+    min-height: 300px;
+    width: 100%;
+
+    background-image: url('../img/cakes/back52.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.middleware {
+    text-align: center;
+}
+
+.middleware_position {
     position: relative;
-    /* background-color: #b3e5fc; */
-    /* height: 300px; */
     height: 100%;
     width: 100%;
-    text-align: center;
     padding-bottom: 5%;
 }
 
-/* .background-image {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
-.circle {
-    position: absolute;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-    background-color: #ffeb3b;
-    border-radius: 50%;
-} */
-
-.background {
-    position: relative; 
-    /* height: 200px; Высота для фона */
-    /* background-color: #dceefc;  */
-    /* display: flex; */
-    min-height: 300px;
-    width: 100%;
-    
-    /* justify-content: center;
-    align-items: center; */
-
-    background-image: url('../img/cakes/back52.png');
-    background-size: contain; /* Изображение будет масштабироваться, чтобы поместиться в контейнер */
-    background-repeat: no-repeat;
-    background-position: right top;
-    /* background-position: center; */
-    /* filter: blur(0.5px); */
-    /* margin-bottom: 10%; */
-    /* padding-bottom: 15%;  */
-    /* background-image: url('img/cakes/back5.jpeg');  /* Путь к изображению 
-    background-size: cover;  /* Изображение растягивается по размеру контейнера 
-    background-position: center;  /* Центрируем изображение 
-    background-repeat: no-repeat;  Не повторяем изображение */
-}
-
-.background img {
-    width: 100%;    /* Изображение растягивается на всю ширину */
-    height: 100%;   /* Изображение растягивается на всю высоту */
-    object-fit: cover; 
+.middleware_circle {
     position: relative;
-    filter: blur(1px);
-    /* left: %;  */
-    
-}
-
-.circle {
-    position: relative;
-    /* position: absolute; */
-    margin-top: -75px; /* Поднимите кружок выше */
-     /*margin-top: -50px; Чтобы круг частично выходил за пределы */ 
-    /*top: 50%;          Центрируем по вертикали */
-    /* left: 50%;        Центрируем по горизонтали */
+    margin-top: -75px; 
     left: 50%; 
-    transform: translate(-50%, 0); /* Смещаем объект на половину его размеров */
+    transform: translate(-50%, 0);
     width: 150px;
     height: 150px;
-    /* background-color: #E9A8D2;   */
+ 
     border-radius: 50%; 
-    /* border-color: #F2527D;
-    border-width: 100px; */
+
     border: 5px inset #E9A8D2;
     margin-bottom: 5%;
     z-index: 15;
     text-align: center;
 
-
     background-image: url('../img/cakes/cir4.png');
-    background-size: contain; /* Изображение будет масштабироваться, чтобы поместиться в контейнер */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.main {
-    display: flex;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: center;
-    height: 300px;  
-}
-
-
 .search-filter {
     display: flex;
     justify-content: flex-end;
+}
+
+.search-filter_position {
     margin-bottom: 20px;
     padding-right: 1%;
 }
 
-.search-filter input {
+.search-filter_input {
     padding: 5px;
     width: 200px;
     border-radius: 10px;
 }
 
-.search-filter button {
+.search-filter_button {
     padding: 5px 10px;
     margin-left: 10px;
 }
@@ -230,10 +133,13 @@ header nav ul li a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+}
+
+.catalog_position {
     margin-bottom: 20px;
 }
 
-.card {
+.catalog_card {
     background-color: #E1E1E1;;
     border: 1px solid #ddd;
     padding: 10px;
@@ -242,7 +148,7 @@ header nav ul li a {
     
 }
 
-.card .photo {
+.catalog_card_photo {
     background-color: #eee;
     height: 50vh;
     margin-bottom: 10px;
@@ -252,17 +158,21 @@ header nav ul li a {
     overflow: hidden;
 }
 
-.card .photo .img {
+/* .catalog_card_photo_img {
+    height: auto;
+    display: block;
+} */
+.catalog_card_photo_img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card .details {
+.catalog_card_details {
     text-align: center;
 }
 
-.card .name, .card .price {
+.catalog_card_details_name, .catalog_card_details_price {
     margin-bottom: 5px;
 }
 
