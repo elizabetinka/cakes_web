@@ -11,7 +11,7 @@ const cakes_const = [
 ];
 
 const minicakes_const = [
-    { name: "Брауни", price: "300 шт", image: "../img/cakes/brauni.jpeg" },
+    { name: "Брауни", price: "300 р/шт", image: "../img/cakes/brauni.jpeg" },
     { name: "Тирамису", price: "2900 р/кг", image: "../img/cakes/tiramisu.jpeg" },
     { name: "Прага", price: "2750 р/кг", image: "../img/cakes/praga.jpeg" },
     { name: "Киевский", price: "2650 р/кг", image: "../img/cakes/kiev.jpeg" },

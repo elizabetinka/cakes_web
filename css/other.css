@@ -57,17 +57,16 @@
     margin: 3%;
 }
 
-
-
 .info{
     display: flex;
-    justify-content: space-around; 
+    justify-content: flex-start; 
     flex-direction: column;
     align-items: center;
     min-height: 55vh; 
     background-color: #E1E1E1;
     margin-bottom: 15%;
     text-align: center;
+    padding-bottom: 3%;
 }
 
 .info_item {
@@ -87,4 +86,28 @@
 }
 .info_item__highlight {
     color: #D32F2F;
+}
+
+.schedule_table {
+    width: 100%;
+    border-collapse: collapse;
+    /* margin-top: 20px; */
+}
+
+.schedule_table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.form_button {
+    margin: 10px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.form_button:hover {
+    background-color: #402E3A;
+    color: #E1E1E1;
+    border: 1px solid #E9A8D2;
 }
