@@ -10,6 +10,20 @@ const cakes_const = [
     { name: "Молочная девочка", price: "2850 р/кг", image: "../img/cakes/milky_girl.jpeg" },
 ];
 
+let photos = []
+// [
+//     { name: "Брауни", price: "300 р/шт", image: "../img/cakes/brauni.jpeg" },
+//     { name: "Тирамису", price: "2900 р/кг", image: "../img/cakes/tiramisu.jpeg" },
+//     { name: "Прага", price: "2750 р/кг", image: "../img/cakes/praga.jpeg" },
+//     { name: "Киевский", price: "2650 р/кг", image: "../img/cakes/kiev.jpeg" },
+//     { name: "Наполеон", price: "2650 р/кг", image: "../img/cakes/napoleon.jpeg" },
+//     { name: "Красный бархат", price: "2650 р/кг", image: "../img/cakes/red_velvet.jpeg" },
+//     { name: "Медовик", price: "2700 р/кг", image: "../img/cakes/medovik.jpeg" },
+//     { name: "Муссовый торт 3 шоколада", price: "2850 р/кг", image: "../img/cakes/3_choko.jpeg" },
+//     { name: "Черный лес", price: "2750 р/кг", image: "../img/cakes/black_tree.jpeg" },
+//     { name: "Молочная девочка", price: "2850 р/кг", image: "../img/cakes/milky_girl.jpeg" },
+// ];
+
 const minicakes_const = [
     { name: "Брауни", price: "300 р/шт", image: "../img/cakes/brauni.jpeg" },
     { name: "Тирамису", price: "2900 р/кг", image: "../img/cakes/tiramisu.jpeg" },
@@ -32,6 +46,9 @@ if (currentLocation.endsWith("index.html")) {
 }
 if (currentLocation.endsWith("cake.html")) {
     cakes = minicakes_const;
+}
+if (currentLocation.endsWith("photo.html")){
+    cakes = photos;
 }
 
 const itemsPerPage = 6;
@@ -56,11 +73,13 @@ function renderCakes(page) {
         cakeElement.classList.add('catalog_card');
         cakeElement.innerHTML = `
             <div class="catalog_card_photo"><img src="${cake.image}" alt="${cake.name}" class="catalog_card_photo_img"></div>
-            <div class="catalog_card_details">
+        `;
+        if (!currentLocation.endsWith("photo.html")){
+            cakeElement.innerHTML += `<div class="catalog_card_details">
                 <div class="catalog_card_details_name">${cake.name}</div>
                 <div class="catalog_card_details_price">${cake.price}</div>
-            </div>
-        `;
+            </div>`;
+        }
         catalog.appendChild(cakeElement);
     });
 
@@ -145,9 +164,11 @@ function updatePagination(page) {
 }
 
 function updatePage() {
-    console.log(currentPage);
-    renderPaginationButtons();
-    renderCakes(currentPage);
+    if (cakes.length !=0 ){
+        console.log(currentPage);
+        renderPaginationButtons();
+        renderCakes(currentPage);
+    }
 }
 
 updatePage()

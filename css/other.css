@@ -111,3 +111,18 @@
     color: #E1E1E1;
     border: 1px solid #E9A8D2;
 }
+
+.preloader{
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #402E3A;
+}
+
+
+.error-message {
+    text-align: center;
+    color: #402E3A;
+    font-size: 18px;
+    font-weight: bold;
+}
