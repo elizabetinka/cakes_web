@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kurale&display=swap" rel="stylesheet">
+    <script src="js/loadStats.js" defer></script>
+    <script src="js/pagination.js" defer></script>
+    <script src="js/active.js" defer></script>
 </head>
 <body class="kurale-regular">
     <header class="header">
@@ -25,12 +28,12 @@
         <div class="menu header_line_menu">
         <nav>
             <ul class="menu_ul">
-                <li><a class="menu_a" href="#">Торты</a></li>
-                <li><a class="menu_a" href="#">Пирожные</a></li>
-                <li><a class="menu_a" href="#">Фото работ</a></li>
-                <li><a class="menu_a" href="#">Доставка и оплата</a></li>
-                <li><a class="menu_a" href="#">Контакты</a></li>
-                <li><a class="menu_a" href="#">Телеграм</a></li>
+                <li><a class="menu_a" href="index.html">Торты</a></li>
+                <li><a href="pages/cake.html" class="menu_a">Пирожные</a></li>
+                <li><a class="menu_a" href="pages/photo.html">Фото работ</a></li>
+                <li><a class="menu_a" href="pages/pay.html">Доставка и оплата</a></li>
+                <li><a class="menu_a" href="pages/contacts.html">Контакты</a></li>
+                <li><a class="menu_a" href="pages/order.html">Сделать заказ</a></li>
             </ul>
         </nav>
         </div>
@@ -51,82 +54,12 @@
         <div class="search-filter search-filter_position">
             <input type="text" placeholder="Поиск" class="search-filter_input">
             <button class="search-filter_button">Поиск</button>
-            <button class="search-filter_button">Фильтр</button>
         </div>
 
         <div class="catalog catalog_position">
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/tiramisu.jpeg" alt="Тирамису" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Тирамису</div>
-                    <div class="catalog_card_details_price">2900 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/praga.jpeg" alt="Прага" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Прага</div>
-                    <div class="catalog_card_details_price">2750 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/kiev.jpeg" alt="Киевский" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Торт Киевский</div>
-                    <div class="catalog_card_details_price">2650 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/napoleon.jpeg" alt="Наполеон" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Наполеон</div>
-                    <div class="catalog_card_details_price">2650 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/red_velvet.jpeg" alt="Красный бархат" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Красный бархат</div>
-                    <div class="catalog_card_details_price">2650 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/medovik.jpeg" alt="Медовик" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Медовик на гречишном меде</div>
-                    <div class="catalog_card_details_price">2700 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/3_choko.jpeg" alt="3 шоколада" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Муссовый торт 3 шоколада</div>
-                    <div class="catalog_card_details_price">2850 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/black_tree.jpeg" alt="Черный лес" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Черный лес</div>
-                    <div class="catalog_card_details_price">2750 р/кг</div>
-                </div>
-            </div>
-            <div class="catalog_card">
-                <div class="catalog_card_photo"><img src="img/cakes/milky_girl.jpeg" alt="Молочная девочка" class="catalog_card_photo_img"></div>
-                <div class="catalog_card_details">
-                    <div class="catalog_card_details_name">Молочная девочка с фисташковыми коржами</div>
-                    <div class="catalog_card_details_price">2850 р/кг</div>
-                </div>
-            </div>
         </div>
 
         <div class="pagination pagination_position">
-            <a href="#" class="pagination_button">&laquo;</a>
-            <a href="#" class="pagination_button pagination_button__active">1</a>
-            <a href="#" class="pagination_button">2</a>
-            <a href="#" class="pagination_button">3</a>
-            <a href="#" class="pagination_button">4</a>
-            <a href="#" class="pagination_button">&raquo;</a>
         </div>
 
         <div class="description description_position">
@@ -135,7 +68,7 @@
     </main>
 
     <footer class="footer">
-        <aside  class="footer_aside">
+        <!-- <aside  class="footer_aside">
             <h3>Связанные статьи</h3>
     <div class="menu footer_menu">
   <ul class="menu_ul">
@@ -143,9 +76,13 @@
     <li><a class="menu_a" href="#">Мы спросили 100 человек какой их любимый торт и..</a></li>
     <li><a class="menu_a" href="#">Новые тренды в кондитерстве</a></li>
   </ul>
-</div>
-        </aside>
+</div>       </aside> -->
+        <div class="footer_stat">
+        <p>© 2024 Все права защищены.</p>
+        <div id="load-stats"></div> 
+        </div>
     </footer>
+    <script src="js/finder.js"></script>
 </body>
 </html>
 
